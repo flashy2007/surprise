@@ -15,6 +15,10 @@
             font-size: 2rem;
             margin-top: 20px;
             animation: bounce 1s infinite alternate;
+            display: none;
+        }
+        #messageSection {
+            display: none;
         }
         @keyframes bounce {
             from { transform: translateY(0); }
@@ -24,15 +28,36 @@
 </head>
 <body>
     <h1>Here's your special video!</h1>
-    <video width="80%" controls autoplay>
+
+    <!-- Video Section -->
+    <video id="myVideo" width="80%" controls autoplay>
         <source src="video.mp4.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <p>You're the best and I tried making this for you as a surprise since I promised this at your b'day ❤️❤️ - you know who.</p>
-    <div id="cuteText">Cutie Pie! 🥰❤️</div>
-    <img src="final_pic.jpg.jpeg" width="200" style="margin-top:20px;" />
+
+    <!-- Message Section (hidden initially) -->
+    <div id="messageSection">
+        <p>You're the best and I tried making this for you as a surprise since I promised this at your b'day ❤️❤️ - you know who.</p>
+        <img src="final_pic.jpg.jpeg" width="200" style="margin-top:20px;" />
+        <div id="cuteText">Cutie Pie! 🥰❤️</div>
+    </div>
+
+    <!-- Background Music -->
     <audio autoplay loop>
         <source src="background.mp3.mp3" type="audio/mpeg">
     </audio>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        const messageSection = document.getElementById('messageSection');
+        const cuteText = document.getElementById('cuteText');
+
+        // When the video ends, show the message section
+        video.addEventListener('ended', () => {
+            video.style.display = 'none';
+            messageSection.style.display = 'block';
+            cuteText.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
