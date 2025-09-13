@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Your Surprise!</title>
+    <style>
+        body {
+            background-color: #ff4d4d;
+            color: white;
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        #cuteText {
+            font-size: 2rem;
+            margin-top: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Here's your special video!</h1>
+    <video width="80%" controls autoplay>
+        <source src="video.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>You're the best and I tried making this for you as a surprise since I promised this at your b'day ❤️❤️ - you know who.</p>
+    <div id="cuteText">Cutie Pie! 🥰❤️</div>
+    <img src="final_pic.jpg.jpeg" width="200" style="margin-top:20px;" />
+    <audio autoplay loop>
+        <source src="background.mp3.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
